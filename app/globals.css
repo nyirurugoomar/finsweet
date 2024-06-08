@@ -43,3 +43,24 @@ h5{
   line-height: 24px;
 
 }
+.body1 {
+  @apply font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76];
+}
+body2{
+  font-family: "Sen", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6D6E76;
+}
+.label{
+  font-family: "Sen", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+.button{
+  @apply bg-yellow md:p-[18px] p-[6px] md:px-16 px-6 font-bold mt-6
+}
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
