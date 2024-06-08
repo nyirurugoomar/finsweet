@@ -21,3 +21,26 @@ export const news =[
     },
     
 ]
+
+export const categories =[
+    {
+        "icon":"/icon_business.png",
+        "title":"Business",
+        "spec":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+        "icon":"/icon_startup.png",
+        "title":"Startup",
+        "spec":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+        "icon":"/icon_economy.png",
+        "title":"Economy",
+        "spec":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+        "icon":"/icon_technology.png",
+        "title":"Technology",
+        "spec":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+]

@@ -1,4 +1,4 @@
-import  {AboutMission, FeaturedPost, Hero}  from "@/components";
+import  {AboutMission, Categories, FeaturedPost, Hero}  from "@/components";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       <Hero/>
       <FeaturedPost/>
       <AboutMission/>
+      <Categories/>
     </main>
   );
 }
