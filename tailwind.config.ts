@@ -8,10 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors:{
+        'black':"#232536",
+        'yellow':"#FFD050",
+        'purpo':"#592EA9",
+        'darkGray':"#4C4C4C",
+        'mediumGray':"#6D6E76",
+        'lightGray':"#F4F4F4",
+        'lavender':"#F4F0F8",
+        'lightYellow':"#FBF6EA"
+
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'hero-bg':"url('/Hero-bg.png')"
       },
     },
   },
