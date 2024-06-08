@@ -1,4 +1,4 @@
-import  {FeaturedPost, Hero}  from "@/components";
+import  {AboutMission, FeaturedPost, Hero}  from "@/components";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Hero/>
       <FeaturedPost/>
+      <AboutMission/>
     </main>
   );
 }
