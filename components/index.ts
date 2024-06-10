@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import AboutMission from "./AboutMission";
 import CustomButton from "./CustomButton";
 import Categories from "./Categories";
+import Why from "./Why";
+
 
 export{
     Hero,
@@ -13,7 +15,9 @@ export{
     Footer,
     AboutMission,
     CustomButton,
-    Categories
+    Categories,
+    Why
+   
 
     
 }

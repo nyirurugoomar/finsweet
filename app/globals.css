@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 h1{
-  font-size: 48px;
-  line-height: 64px;
   font-family: "Sen", sans-serif;
   font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
 }
 
 h2{
@@ -58,6 +58,7 @@ body2{
   font-size: 14px;
   line-height: 20px;
 }
+
 .button{
   @apply bg-yellow md:p-[18px] p-[6px] md:px-16 px-6 font-bold mt-6
 }

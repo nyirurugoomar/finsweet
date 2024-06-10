@@ -20,7 +20,8 @@ const config: Config = {
 
       },
       backgroundImage: {
-        'hero-bg':"url('/Hero-bg.png')"
+        'hero-bg':"url('/Hero-bg.png')",
+        'mission-about-bg':"url('/aboutMissionbg.png')"
       },
     },
   },

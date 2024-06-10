@@ -4,7 +4,7 @@ import CustomButton from './CustomButton'
 function AboutMission() {
   return (
     <div className='w-full flex justify-center'>
-      <div className='bg-lavender md:w-[1280px]'>
+      <div className='bg-mission-about-bg bg-cover md:w-[1280px]'>
         <div className='grid grid-cols-1 lg:grid-cols-2 justify-center mx-auto gap-4 md:p-20 p-10'>
           <div className=''>
             <p className='font-sans text-[16px] uppercase text-black tracking-widest leading-10 font-bold'>ABOUT US</p>
