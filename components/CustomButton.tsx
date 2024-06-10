@@ -15,7 +15,7 @@ function CustomButton({ title,containerStyles,handleClick,btnType,textStyles,rig
             {title}
         </span>
         {rightIcon && (
-          <div className="relative w-4 h-3 font-bold ml-2">
+          <div className="relative w-4 h-3 font-bold ml-2 hover:bg-[#90721f]">
             <Image
              src={rightIcon}
              alt="right icon"

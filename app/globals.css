@@ -44,7 +44,10 @@ h5{
 
 }
 .body1 {
-  @apply font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76];
+  @apply font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] ;
+}
+.body0 {
+  @apply font-sans font-normal md:text-[16px] text-[13px]  leading-[28px] text-[#ffffff] ;
 }
 body2{
   font-family: "Sen", sans-serif;
@@ -60,7 +63,7 @@ body2{
 }
 
 .button{
-  @apply bg-yellow md:p-[18px] p-[6px] md:px-16 px-6 font-bold mt-6
+  @apply bg-yellow md:p-[18px] p-[6px] md:px-16 px-6 font-bold mt-6 hover:bg-[#EDC14A]
 }
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;

@@ -10,7 +10,7 @@ function Join() {
         <div className='mt-6 flex justify-center'>
           <CustomButton
             title="Join Now"
-            containerStyles="button"
+            containerStyles="button hover:bg-[#EDC14A]"
             
             
           />
