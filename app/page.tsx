@@ -1,5 +1,6 @@
-import  {AboutMission, Categories, FeaturedPost, Hero, Why}  from "@/components";
+import  {AboutMission, Authors, Categories, FeaturedPost, Hero, Join, Partners, Testimonial, Why}  from "@/components";
 import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
       <AboutMission/>
       <Categories/>
       <Why/>
+      <Authors/>
+      <Partners/>
+      <Testimonial/>
+      <Join/>
       
     </main>
   );

@@ -6,6 +6,10 @@ import AboutMission from "./AboutMission";
 import CustomButton from "./CustomButton";
 import Categories from "./Categories";
 import Why from "./Why";
+import Authors from "./Authors";
+import Partners from "./Partners";
+import Testimonial from "./Testimonial";
+import Join from "./Join";
 
 
 export{
@@ -16,7 +20,11 @@ export{
     AboutMission,
     CustomButton,
     Categories,
-    Why
+    Why,
+    Authors,
+    Partners,
+    Testimonial,
+    Join
    
 
     

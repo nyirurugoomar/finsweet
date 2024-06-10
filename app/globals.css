@@ -65,3 +65,39 @@ body2{
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.sliding-images-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 225px; /* Adjust based on image height */
+}
+
+.sliding-images {
+  display: flex;
+  width: 200%; /* Double the width for smooth scrolling */
+  animation: slide 20s linear infinite;
+}
+
+.sliding-images img {
+  width: 200px; /* Adjust based on the number of images to fit in the container */
+  height: 200px;
+}
+
+@media (max-width: 414px){
+  .sliding-images img{
+    width:100px;
+    height: 100px;
+  }
+  .sliding-images {
+    display: flex;
+    width: 300%; /* Double the width for smooth scrolling */
+    animation: slide 20s linear infinite;
+  }
+}
+
