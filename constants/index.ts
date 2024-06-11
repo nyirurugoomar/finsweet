@@ -127,3 +127,31 @@ export const testimonials=[
         "testimonial": "The quality of the content is top-notch. I always come away with new knowledge and inspiration to apply in my own life."
       }
 ]
+
+export const posts=[
+    {
+        "post_type": "STARTUP",
+        "image": "/postStartup.png",
+        "title": "Innovative Startup Ideas for 2024",
+        "body": "Discover the most promising startup ideas for the coming year. From tech innovations to sustainable solutions, explore the opportunities that await."
+    },
+    {
+        "post_type": "BUSINESS",
+        "image": "/postBusiness.png",
+        "title": "How to Scale Your Business Effectively",
+        "body": "Scaling a business requires strategic planning and execution. Learn key strategies to effectively grow your business without compromising quality."
+    },
+    {
+        "post_type": "ECONOMY",
+        "image": "/postEconomy.avif",
+        "title": "The State of the Global Economy in 2024",
+        "body": "An in-depth analysis of the current global economic trends. Understand the factors influencing the economy and what to expect in the coming year."
+    },
+    {
+        "post_type": "TECHNOLOGY",
+        "image": "/postTechnology.png",
+        "title": "The Rise of Quantum Computing",
+        "body": "Quantum computing is set to revolutionize the tech industry. Learn about the latest advancements and what they mean for the future of technology."
+    }
+    
+]

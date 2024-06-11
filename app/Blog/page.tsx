@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { CustomButton } from '@/components'
+import { posts } from '@/constants'
+
 
 function page() {
   return (
@@ -23,19 +25,23 @@ function page() {
       </div>
       {/* all post  */}
       <div className='md:my-10'>
-         <div className='md:w-[1282px] md:p-10 border-b-[0.3px] border-mediumGray md:mx-10 '>
+         <div className='md:w-[1282px] md:p-10 md:border-b-[0.3px] md:border-mediumGray md:mx-10 '>
           <h1>All posts</h1>
          </div>
-         <div className='flex grid-cols-1 lg:grid-cols-2 md:p-20'>
+         {posts.map((post,index) =>(
+          <div key={index} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8'>
            <div className=''>
-              <Image src='/postStartup.png' width={490} height={318} alt=''/>
+              <Image src={post.image} width={490} height={318} alt=''/>
            </div>
            <div className='md:p-8'>
-                <p className='font-sans md:text-[16px] md:leading-[20px] font-medium tracking-[3px] uppercase text-purpo '>Startup</p>
-                <h2 className='md:my-4 md:w-[642px]'>Design tips for designers that cover everything you need</h2>
-                <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <p className='font-sans md:text-[16px] md:leading-[20px] leading-10 font-medium tracking-[3px] uppercase text-purpo '>{post.post_type}</p>
+                <h2 className='md:my-4 md:w-[642px] md:text-[36px] text-[30px]'>{post.title}</h2>
+                <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>{post.body}</p>
            </div>
          </div>
+         ))}
+         
+         
       </div>
     </div>
   )
