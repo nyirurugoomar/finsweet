@@ -23,8 +23,8 @@ function Header() {
         </div>
         <div className='hidden md:flex flex md:gap-6 gap-2 text-white items-center'>
           <Link href='/' className="body0">Home</Link>
-          <Link href='/blog' className="body0">Blog</Link>
-          <Link href='/about-us' className="body0">About us</Link>
+          <Link href='/Blog' className="body0">Blog</Link>
+          <Link href='/AboutUs' className="body0">About us</Link>
           <Link href='/contact-us' className="body0">Contact us</Link>
           <CustomButton
             title="Subscribe"

@@ -12,6 +12,8 @@ import Testimonial from "./Testimonial";
 import Join from "./Join";
 
 
+
+
 export{
     Hero,
     FeaturedPost,
@@ -25,7 +27,5 @@ export{
     Partners,
     Testimonial,
     Join
-   
 
-    
 }
