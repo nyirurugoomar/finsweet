@@ -13,7 +13,7 @@ function FeaturedPost() {
              <div className='border-[0.1px] border-mediumGray p-4 md:mt-4'>
              <img src="/featureimage.png"  alt="feature image" className='md:w-[669px] md:h-[352px] mt-4' />
              <p className=' font-sans text-[14px] text-black leading-[20px] my-4 '>By <span className='text-purpo'>John Doe</span>   <span>l   May 23, 2022</span></p>
-            <h3 className='md:w-[659px] my-4 md:text-[28px] text-[20px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h3>
+            <h3 className='md:w-[550px] my-4 md:text-[28px] text-[20px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h3>
             <p className=' body1 md:w-[551px]'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
             <CustomButton
              title="Read More"

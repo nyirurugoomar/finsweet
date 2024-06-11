@@ -29,7 +29,7 @@ function page() {
           <h1>All posts</h1>
          </div>
          {posts.map((post,index) =>(
-          <div key={index} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8'>
+          <div key={index} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8 hover:bg-lightYellow cursor-pointer'>
            <div className=''>
               <Image src={post.image} width={490} height={318} alt=''/>
            </div>

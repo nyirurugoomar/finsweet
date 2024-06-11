@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div className='md:max-w-[1440px] md:mx-auto bg-hero-bg bg-cover md:p-20 p-10 leading-6  '>
+    <div className='md:md:w-full md:mx-auto bg-hero-bg bg-cover md:p-20 p-10 leading-6  '>
         <div className='md:p-20 '>
             <h5 className='md:text-[16px] text-[12px] font-light font-sans text-lightGray uppercase'>Posted on <span className=' font-bold uppercase '>startup</span></h5>
             <h1 className='md:w-[803px] text-lightGray md:mt-4 md:text-[48px] text-[16px] md:leading-[64px] leading-[30px] '>It Step-by-step guide to choosing great font pairs</h1>

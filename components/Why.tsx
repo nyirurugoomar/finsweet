@@ -4,7 +4,7 @@ import CustomButton from './CustomButton'
 
 function Why() {
   return (
-    <div className='w-full mt-10'>
+    <div className='w-full md:w-full mt-10'>
        <div className=' grid grid-cols-1 lg:grid-cols-2 md:p-16 p-10'>
          <div className='z-0 md:absolute'>
             <Image src='/together.png' alt='photo' width={949} height={405}/>
