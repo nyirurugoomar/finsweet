@@ -15,7 +15,7 @@ function Footer() {
                  <Link href='/' className="body0">Blog</Link>
                  <Link href='/' className="body0">About us</Link>
                  <Link href='/' className="body0">Contact us</Link>
-                 <Link href='/' className="body0">Privacy Policy</Link>
+                 <Link href='/PrivacyPolicy' className="body0">Privacy Policy</Link>
               </div>
            </div>
            <div className="md:bg-[#6f626228] md:p-20  md:mx-14 mx-6">

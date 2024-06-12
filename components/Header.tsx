@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <div className='w-full'>
-      <div className='flex justify-between bg-[#232536] items-center p-4 md:p-6'>
+      <div className='flex justify-between bg-[#232536] items-center p-2 md:p-4'>
         <div className='my-4'>
             <Link href='/'>
               <Image  src='/Logo.svg' width={140} height={28.35} alt="Logo" />
