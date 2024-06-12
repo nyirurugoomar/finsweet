@@ -25,7 +25,7 @@ function Header() {
           <Link href='/' className="body0">Home</Link>
           <Link href='/Blog' className="body0">Blog</Link>
           <Link href='/AboutUs' className="body0">About us</Link>
-          <Link href='/contact-us' className="body0">Contact us</Link>
+          <Link href='/ContactUs' className="body0">Contact us</Link>
           <CustomButton
             title="Subscribe"
             containerStyles="bg-white text-black md:h-[56px] md:w-[179px] font-bold"
@@ -37,7 +37,7 @@ function Header() {
           <Link href='/' className="body0" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href='/Blog' className="body0" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href='/AboutUs' className="body0" onClick={() => setMenuOpen(false)}>About us</Link>
-          <Link href='/contact-us' className="body0" onClick={() => setMenuOpen(false)}>Contact us</Link>
+          <Link href='/ContactUs' className="body0" onClick={() => setMenuOpen(false)}>Contact us</Link>
           <CustomButton
             title="Subscribe"
             containerStyles="bg-white text-black h-[56px] w-full font-bold mt-2"

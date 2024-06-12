@@ -49,6 +49,9 @@ h5{
 .body0 {
   @apply font-sans font-normal md:text-[16px] text-[13px]  leading-[28px] text-[#ffffff] ;
 }
+.body2 {
+  @apply font-sans font-thin md:text-[16px] text-[13px]  leading-[28px] text-[#ffffff] ;
+}
 body2{
   font-family: "Sen", sans-serif;
   font-size: 14px;
