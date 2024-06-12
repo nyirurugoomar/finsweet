@@ -35,8 +35,8 @@ function Header() {
       {menuOpen && (
         <div className='flex flex-col bg-[#232536] text-white p-4 md:hidden'>
           <Link href='/' className="body0" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href='/blog' className="body0" onClick={() => setMenuOpen(false)}>Blog</Link>
-          <Link href='/about-us' className="body0" onClick={() => setMenuOpen(false)}>About us</Link>
+          <Link href='/Blog' className="body0" onClick={() => setMenuOpen(false)}>Blog</Link>
+          <Link href='/AboutUs' className="body0" onClick={() => setMenuOpen(false)}>About us</Link>
           <Link href='/contact-us' className="body0" onClick={() => setMenuOpen(false)}>Contact us</Link>
           <CustomButton
             title="Subscribe"
