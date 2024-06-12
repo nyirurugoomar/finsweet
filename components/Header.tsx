@@ -16,7 +16,9 @@ function Header() {
     <div className='w-full'>
       <div className='flex justify-between bg-[#232536] items-center p-4 md:p-6'>
         <div className='my-4'>
-          <Image src='/Logo.svg' width={140} height={28.35} alt="Logo" />
+            <Link href='/'>
+              <Image  src='/Logo.svg' width={140} height={28.35} alt="Logo" />
+            </Link>
         </div>
         <div className='md:hidden flex items-center'>
           <FiMenu className='text-white text-3xl' onClick={toggleMenu} />
