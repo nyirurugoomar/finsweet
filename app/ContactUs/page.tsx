@@ -4,9 +4,11 @@ function Page() {
   return (
     <div className='flex justify-center items-center w-full'>
       <div className='text-center md:mt-20 mt-10'>
+        <div className='md:space-y-2 md:mb-8'>
         <p className='font-sans uppercase md:leading-[20px] text-black md:text-[16px] font-bold'>Contact us</p>
         <h1 className='md:text-[48px] text-[30px]'>Let’s Start a Conversation</h1>
         <p className='body1 md:w-[768px] md:block hidden md:my-4 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        </div>
         <div className='bg-purpo'>
           <div className='grid grid-cols-1 lg:grid-cols-2 md:p-10 p-6 md:gap-20 '>
             <div className='text-start'>
@@ -47,7 +49,7 @@ function Page() {
            ></textarea>
            <button 
             type="submit"
-            className='md:w-[768px] md:h-[76px] h-[46px] md:border-[1.5px] md:p-4 md:my-4 bg-yellow text-black font-bold'
+            className='md:w-[768px] md:h-[76px] h-[46px] md:border-[1.5px] md:p-4 md:my-4 bg-yellow hover:bg-[#EDC14A] text-black font-bold'
            >
              Send Message
            </button>

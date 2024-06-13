@@ -12,9 +12,9 @@ function Footer() {
               </div>
               <div className="md:flex flex md:gap-6 gap-2   md:justify-end justify-start  text-white">
                  <Link href='/' className="body0">Home</Link>
-                 <Link href='/' className="body0">Blog</Link>
-                 <Link href='/' className="body0">About us</Link>
-                 <Link href='/' className="body0">Contact us</Link>
+                 <Link href='/Blog' className="body0">Blog</Link>
+                 <Link href='/AboutUs' className="body0">About us</Link>
+                 <Link href='/ContactUs' className="body0">Contact us</Link>
                  <Link href='/PrivacyPolicy' className="body0">Privacy Policy</Link>
               </div>
            </div>
