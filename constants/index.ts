@@ -152,6 +152,41 @@ export const posts=[
         "image": "/postTechnology.png",
         "title": "The Rise of Quantum Computing",
         "body": "Quantum computing is set to revolutionize the tech industry. Learn about the latest advancements and what they mean for the future of technology."
+    },
+    {
+        "post_type": "STARTUP",
+        "image": "/postStartup2.png",
+        "title": "Startup Funding: What You Need to Know",
+        "body": "Navigating the world of startup funding can be challenging. Get insights on securing funding from angel investors, venture capitalists, and crowdfunding platforms."
+    },
+    {
+        "post_type": "BUSINESS",
+        "image": "/postBusiness2.png",
+        "title": "Sustainable Business Practices for the Modern Company",
+        "body": "Incorporating sustainable practices is not just good for the environment but also for business. Discover how to make your business more sustainable."
+    },
+    {
+        "post_type": "ECONOMY",
+        "image": "/postEconomy2.avif",
+        "title": "Cryptocurrency and Its Economic Impact",
+        "body": "Cryptocurrencies are reshaping the financial landscape. Understand their impact on the global economy and what it means for the future of money."
+    },
+    {
+        "post_type": "TECHNOLOGY",
+        "image": "/postTechnology2.png",
+        "title": "Artificial Intelligence in Everyday Life",
+        "body": "AI is becoming increasingly integrated into our daily lives. Explore how AI is being used in various industries and its potential future applications."
+    },
+    {
+        "post_type": "STARTUP",
+        "image": "/postStartup3.png",
+        "title": "Building a Strong Startup Team",
+        "body": "A strong team is crucial for a startup's success. Learn how to attract, retain, and motivate top talent to build a resilient startup team."
+    },
+    {
+        "post_type": "BUSINESS",
+        "image": "/postBusiness3.png",
+        "title": "The Importance of Customer Experience",
+        "body": "Customer experience can make or break a business. Learn strategies to enhance customer satisfaction and loyalty in a competitive market."
     }
-    
 ]
