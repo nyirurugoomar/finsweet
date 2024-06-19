@@ -10,6 +10,7 @@ import Authors from "./Authors";
 import Partners from "./Partners";
 import Testimonial from "./Testimonial";
 import Join from "./Join";
+import CmsNavbar from "./CmsNavbar";
 
 
 
@@ -26,6 +27,8 @@ export{
     Authors,
     Partners,
     Testimonial,
-    Join
+    Join,
+    CmsNavbar,
+    
 
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import CustomButton from './CustomButton'
 import { news } from '@/constants'
+import Link from 'next/link';
 
 
 function FeaturedPost() {
@@ -25,7 +26,9 @@ function FeaturedPost() {
         <div className='w-[517px]'>
             <div className='md:flex  justify-between items-center'>
             <h2 className='hidden md:block'>All posts</h2>
-            <p className='body1'>View All</p>
+            <Link href='/Blog' className='cursor-pointer'>
+            <p  className='body1'>View All</p>
+            </Link>
             </div>
             <div className='grid'>
             {news.map((post, index) => (
