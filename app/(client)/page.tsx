@@ -2,7 +2,7 @@ import  {AboutMission, Authors, Categories, FeaturedPost, Hero, Join, Partners, 
 import Image from "next/image";
 
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="overflow-hidden">
       <Hero/>

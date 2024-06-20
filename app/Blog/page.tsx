@@ -1,34 +1,64 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CustomButton } from '@/components';
-import { posts } from '@/constants';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { client } from "@/sanity/lib/client";
+import { Post } from '@/types/Interface';
+import Link from 'next/link';
+
+async function getPost() {
+  const query = `*[_type =="post"]{
+    title,
+    slug,
+    publishedAt,
+    excerpt,
+    _id,
+    tags[]->{
+      id,
+      slug,
+      name
+    }
+  }`;
+  const data = await client.fetch(query);
+  return data;
+}
 
 
 function Page() {
   const [currentPage, setCurrentPage] = useState(0);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<Post[]>([]);
   const postsPerPage = 4;
 
   useEffect(() => {
-    // Simulate loading delay
+    async function fetchData() {
+      const data = await getPost();
+      setPosts(data);
+      setLoading(false);
+    }
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Adjust the delay as needed
+    }, 1000);
+
     return () => clearTimeout(timer);
   }, [currentPage]);
 
   const handleNext = () => {
     if ((currentPage + 1) * postsPerPage < posts.length) {
-      setLoading(true); // Set loading state to true
+      setLoading(true);
       setCurrentPage(currentPage + 1);
     }
   };
 
   const handlePrev = () => {
     if (currentPage > 0) {
-      setLoading(true); // Set loading state to true
+      setLoading(true);
       setCurrentPage(currentPage - 1);
     }
   };
@@ -36,6 +66,7 @@ function Page() {
   const startIndex = currentPage * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const currentPosts = posts.slice(startIndex, endIndex);
+
 
   return (
     <div className='w-full'>
@@ -55,27 +86,32 @@ function Page() {
           <Image src='/blogMan.png' width={515} height={359} alt='' />
         </div>
       </div>
-      {/* all post */}
       <div className='md:my-10'>
         <div className='md:w-[1282px] md:p-10 md:border-b-[0.3px] md:border-mediumGray md:mx-10'>
           <h1>All posts</h1>
         </div>
         {loading ? (
           <div className='flex justify-center items-center'>
-            <Image src='/loadingIcon.gif' className='md:mt-4' width={50} height={50} alt='loading'/>
+            <Image src='/loadingIcon.gif' className='md:mt-4' width={50} height={50} alt='loading' />
           </div>
         ) : (
-          currentPosts.map((post, index) => (
-            <div key={index} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8 hover:bg-lightYellow cursor-pointer'>
-              <div className=''>
-                <Image src={post.image} width={490} height={318} alt='' />
-              </div>
+          currentPosts.map((post) => (
+
+            <Link  href={`/posts/${post.slug.current}`}>
+            <div key={post._id} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8 hover:bg-lightYellow cursor-pointer'>
               <div className='md:p-8'>
-                <p className='font-sans md:text-[16px] md:leading-[20px] leading-10 font-medium tracking-[3px] uppercase text-purpo'>{post.post_type}</p>
+              {post.tags.map((tag) => (
+                  <p key={tag.id} className='font-sans md:text-[16px] md:leading-[20px] leading-10 font-medium tracking-[3px] uppercase text-purpo'>{tag.name}</p>
+
+                  ))}
                 <h2 className='md:my-4 md:w-[642px] md:text-[36px] text-[30px]'>{post.title}</h2>
-                <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>{post.body}</p>
+                <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>{post.excerpt}</p>
+                <div className='flex flex-wrap'>
+                  
+                </div>
               </div>
             </div>
+            </Link>
           ))
         )}
       </div>
