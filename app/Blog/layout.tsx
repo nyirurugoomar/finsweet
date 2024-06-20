@@ -1,4 +1,4 @@
-import { Header,Footer } from "@/components"
+import { Header,Footer } from '@/components'
 import './globals.css'
 export const metadata = {
   title: 'Next.js',
