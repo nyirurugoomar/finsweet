@@ -44,9 +44,9 @@ function Footer() {
                 <p className="body1">Hello@finsweet.com  020 7993 2905</p>
               </div>
               <div className='flex space-x-6 mt-2 md:justify-end justify-start '>
-                <img src="/Facebook_footer.svg" width={16}  height={16} alt="facebook" />
-                <img src="/inst_footer.svg" width={16} height={16} alt="instagram" />
-                <img src="/Linkedin_footer.svg" width={16} height={16} alt="linkedin" />
+                <Image src="/Facebook_footer.svg" width={16}  height={16} alt="facebook" />
+                <Image src="/inst_footer.svg" width={16} height={16} alt="instagram" />
+                <Image src="/Linkedin_footer.svg" width={16} height={16} alt="linkedin" />
             </div>
            </div>
         </div>

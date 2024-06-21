@@ -14,8 +14,7 @@ function AboutMission() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <button className='text-purpo text-[18px]'>Read More</button>
-              
-            
+
           </div>
           <div>
             <p className='font-sans text-[16px] uppercase text-black tracking-widest leading-10 font-bold'>Our mission</p>

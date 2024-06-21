@@ -6,16 +6,33 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { client } from "@/sanity/lib/client";
 import { Post } from '@/types/Interface';
 import Link from 'next/link';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 async function getPost() {
-  const query = `*[_type =="post"]{
+  const query = `*[_type == "post"]{
     title,
     slug,
     publishedAt,
     excerpt,
     _id,
+    body[]{
+      ...,
+      _type == "image" => {
+        ...,
+        "asset": asset->{
+          _id,
+          url,
+          metadata {
+            dimensions,
+            lqip,  // Low Quality Image Placeholder
+            palette
+          }
+        },
+        alt
+      }
+    },
     tags[]->{
-      id,
+      _id,
       slug,
       name
     }
@@ -23,7 +40,6 @@ async function getPost() {
   const data = await client.fetch(query);
   return data;
 }
-
 
 function Page() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -67,7 +83,6 @@ function Page() {
   const endIndex = startIndex + postsPerPage;
   const currentPosts = posts.slice(startIndex, endIndex);
 
-
   return (
     <div className='w-full'>
       <div className='grid grid-cols-1 lg:grid-cols-2 bg-lavender md:p-20 p-6'>
@@ -96,21 +111,36 @@ function Page() {
           </div>
         ) : (
           currentPosts.map((post) => (
-
-            <Link  href={`/posts/${post.slug.current}`}>
-            <div key={post._id} className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8 hover:bg-lightYellow cursor-pointer'>
-              <div className='md:p-8'>
-              {post.tags.map((tag) => (
-                  <p key={tag.id} className='font-sans md:text-[16px] md:leading-[20px] leading-10 font-medium tracking-[3px] uppercase text-purpo'>{tag.name}</p>
-
+            <Link href={`/posts/${post.slug.current}`} key={post._id}>
+              <div className='md:flex grid-cols-1 lg:grid-cols-2 md:p-10 p-8 hover:bg-lightYellow cursor-pointer'>
+                <div className=''>
+                {post.body.map((block: { _type: string; asset: { url: string | StaticImport; metadata: { lqip: string | undefined; }; }; alt: any; }, index: React.Key | null | undefined) => {
+                    if (block._type === 'image' && block.asset?.url) {
+                      return (
+                        <div key={index} className=''>
+                          <Image
+                            src={block.asset.url}
+                            alt={block.alt || 'Post Image'}
+                            width={490}
+                            height={318}
+                            placeholder='blur'
+                            blurDataURL={block.asset.metadata.lqip}
+                          />
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+                <div className='md:p-8'>
+                  {post.tags.map((tag) => (
+                    <p key={tag.id} className='font-sans md:text-[16px] md:leading-[20px] leading-10 font-medium tracking-[3px] uppercase text-purpo'>{tag.name}</p>
                   ))}
-                <h2 className='md:my-4 md:w-[642px] md:text-[36px] text-[30px]'>{post.title}</h2>
-                <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>{post.excerpt}</p>
-                <div className='flex flex-wrap'>
+                  <h2 className='md:my-4 md:w-[642px] md:text-[36px] text-[30px]'>{post.title}</h2>
+                  <p className='font-sans font-normal text-[16px] leading-[28px] text-[#6D6E76] md:w-[642px]'>{post.excerpt}</p>
                   
                 </div>
               </div>
-            </div>
             </Link>
           ))
         )}

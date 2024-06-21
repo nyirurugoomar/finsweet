@@ -33,7 +33,7 @@ export const post={
         },
         {
             name:"body",
-            title:"Body",
+            title:"Body (Recomended image type of png)",
             type:"array",
             of:[
                 {type: "block"},

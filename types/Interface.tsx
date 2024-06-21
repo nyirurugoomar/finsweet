@@ -5,7 +5,6 @@ export interface Post{
     excerpt: string;
     _id: string;
     body:any;
-    className:any;
     tags: { id: string; slug: string; name: string }[];
 
 }
