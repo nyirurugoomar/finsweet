@@ -107,7 +107,7 @@ function Page() {
         </div>
         {loading ? (
           <div className='flex justify-center items-center'>
-            <Image src='/loadingIcon.gif' className='md:mt-4' width={50} height={50} alt='loading' />
+            <Image src='/iconsNew-loading.gif' className='md:mt-4' width={50} height={50} alt='loading' />
           </div>
         ) : (
           currentPosts.map((post) => (

@@ -44,6 +44,11 @@ export const post={
             ]
         },
         {
+           name:"author",
+           title:"Author Name",
+           type:"string"
+        },
+        {
             name:"tags",
             title:"Tags",
             type:"array",
