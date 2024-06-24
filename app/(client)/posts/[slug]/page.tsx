@@ -4,6 +4,7 @@ import { Params, Post } from '@/types/Interface';
 import './globals.css';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
+import {notFound} from 'next/navigation'
 
 async function getPost(slug: string) {
   const query = `
@@ -45,6 +46,9 @@ async function getPost(slug: string) {
 async function page({ params }: Params) {
   const post: Post = await getPost(params.slug);
   console.log(post, 'post');
+  if (!post){
+    notFound()
+  }
   return (
     <div className='md:w-full md:mx-0 mx-4 flex justify-center items-center md:mt-20'>
       <div className=''>
