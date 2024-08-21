@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiMenu } from 'react-icons/fi';
-import { FiX } from 'react-icons/fi'; // Import the cross icon
+import { FiX } from 'react-icons/fi'; 
 import CustomButton from './CustomButton';
 
 function Header() {
